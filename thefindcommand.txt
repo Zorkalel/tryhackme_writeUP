@@ -24,4 +24,10 @@ on a pour argument -iname : le nom est insensible à la casse.
 
 Réponse : find /<directoryAchercher> -type <f or d> -iname "nomDuFichier.extension"
 
-3-
+3-Find all directories whose name contains the word "exploits"
+Réponse : find / -type <f or d> -name "<joker>MotArechercher<joker>"
+
+
+TASK #3
+
+1-
