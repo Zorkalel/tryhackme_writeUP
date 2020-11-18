@@ -30,4 +30,19 @@ Réponse : find / -type <f or d> -name "<joker>MotArechercher<joker>"
 
 TASK #3
 
-1-
+1-Find all files owned by the user "kittycat"
+Dans cette partie on discute a propos du proprietaire des fichiers et avec find on peut connaitre
+le propriétaire d'un fichier avec l'option -user alors la réponse sera:
+
+find / -type < f or d > -user <NomDuProprietaire>
+
+2- Find all files that are exactly 150 bytes in size
+Faut savoir que pour préciser la taille d'un fichier il suffit d'ajouter l option
+-size mais pour savoir la taille en byte il faut ajouter c suivi de la taille alors la
+réponse sera :
+
+find / -type <f or d > -size <tailleDuFichier>c
+
+3-Find all files in the /home directory (recursive) with size less than 2 KiB’s and extension ".txt"
+
+
