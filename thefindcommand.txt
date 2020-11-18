@@ -1,0 +1,14 @@
+TASK #2
+
+1-Find all files whose name ends with ".xml"
+Dans cette partie on vous demande de retrouver tous les fichiers qui se terminent par .xml alors
+le mieux est d'utiliser les options telles que
+-type : pour les types ( fichiers(f) ou dossiers(d)) 
+    qui est suivi de l'argument soit f ou d
+-name : pour le nom fichiers ou dossiers
+    qui est suivi de l'argument qui est le nom et a noter que sur linux il les termes qu'on appelle joker { * = tous, ?= n'importe, ...}
+ pour cette 1ere partie vous allez fournir
+ 
+ find -type <argument> -name "<joker.extensionArechercher>"
+ 
+ 2-
