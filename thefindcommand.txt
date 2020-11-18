@@ -1,3 +1,9 @@
+Room : tryhackme.com/room/thefindcommand
+###########
+Legend
+<> : exemple mais n'inclut pas dans la vraie réponse
+##########
+
 TASK #2
 
 1-Find all files whose name ends with ".xml"
@@ -9,6 +15,13 @@ le mieux est d'utiliser les options telles que
     qui est suivi de l'argument qui est le nom et a noter que sur linux il les termes qu'on appelle joker { * = tous, ?= n'importe, ...}
  pour cette 1ere partie vous allez fournir
  
- find -type <argument> -name "<joker.extensionArechercher>"
+ Réponse: find / -type <argument> -name "<joker>.<extensionArechercher>"
  
- 2-
+2-Find all files in the /home directory (recursive) whose name is "user.txt" (case insensitive)
+Cet partie cet presque la même avec seule différence qu'on demande de travailler avec le répertoire
+/home de trouver le fichier user.txt mais insensible à la casse.
+on a pour argument -iname : le nom est insensible à la casse.
+
+Réponse : find /<directoryAchercher> -type <f or d> -iname "nomDuFichier.extension"
+
+3-
