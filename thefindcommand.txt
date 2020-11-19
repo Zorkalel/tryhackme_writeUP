@@ -70,4 +70,19 @@ le fichier dont le User a le droit de read, le group de written et les autres ex
 ainsi : 124
 Pour le faire avec find on a trois manieres avec l'option -perm qui sera suivi soit du
 - ou /
+- : quand l'utilisateur doit avoir au moins le droit spécifié
+/ : quand l'utilisateur a l'une des droits spécifiés
 
+ainsi la réponse sera 
+
+find / -type < f or d> -perm 644
+où 644 : wx x x
+
+5-Find all files that are only readable by anyone (use octal format)
+
+find / -type <f or d> -perm /444
+où 644 : r r r
+
+6- Find all files with write permission for the group "others", regardless of any other permissions, with extension ".sh" (use symbolic format)
+le format symbolic c'est un format particulier dans l'affichage des droits, exemple
+u pour USER, g pour Group et o pour les autres, avec + pour ajouter et - pour enlever
