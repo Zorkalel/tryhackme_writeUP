@@ -85,4 +85,22 @@ où 644 : r r r
 
 6- Find all files with write permission for the group "others", regardless of any other permissions, with extension ".sh" (use symbolic format)
 le format symbolic c'est un format particulier dans l'affichage des droits, exemple
-u pour USER, g pour Group et o pour les autres, avec + pour ajouter et - pour enlever
+u pour USER, g pour Group et o pour les autres, avec + pour ajouter et - pour enlever et = pour soumettre
+des droits a un group ouu user et ignorer les autres
+
+find / -type <f or d> -o=w -name "<joker>.sh"
+
+7- Find all files in the /usr/bin directory (recursive) that are owned by root and have at least the SUID permission (use symbolic format)
+SUID = s 
+find /usr/bin -type f -user <proprietaire> -permission -u=<SUIDvalue>
+
+8-Find all files that were not accessed in the last 10 days with extension ".png"
+avoir acces a un fichier est représenté par l'option -a mais pour préciser le temps dans lequel
+il faut ajouter l'argument time ainsi on aura -atime
+
+find / -type f -atime +<numberOfDays> -name "<joker>.<extension>"
+
+9-Find all files in the /usr/bin directory (recursive) that have been modified within the last 2 hours
+pour voir les fichiers modifier depuis un temps il faut l'option -m mais pour dire qu'il a été modifié depuis un temps durée il faut préciser l'argument min( minute) et on sait que 1 heure vaut 60 minutes ainsi la réponse sera:
+
+dfind /usr/bin -type <f or d> -mmin -<TempsModifierEnMinute>
