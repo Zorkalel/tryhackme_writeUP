@@ -38,11 +38,25 @@ find / -type < f or d > -user <NomDuProprietaire>
 
 2- Find all files that are exactly 150 bytes in size
 Faut savoir que pour préciser la taille d'un fichier il suffit d'ajouter l option
--size mais pour savoir la taille en byte il faut ajouter c suivi de la taille alors la
+-size mais pour savoir la taille en byte il faut ajouter l'argument c suivi de la taille alors la
 réponse sera :
 
 find / -type <f or d > -size <tailleDuFichier>c
 
 3-Find all files in the /home directory (recursive) with size less than 2 KiB’s and extension ".txt"
+POUR trouver la taille d'un fichier en KiB's on se sert de l'argument k alors la réponse sera :
+
+find /<directory> -type <f or d> -size -<tailleDuFichier>k -name "<joker>.<extension>"
+
+4-Find all files that are exactly readable and writeable by the owner, and readable by everyone else (use octal format)
+Le format octal c'est le format avec les chiffres exemple 1 jusqu'à 9. la notion de permission sous linux
+a été le tourment de chaque utilisateur car c'est compliqué mais je vais résumé pour vous:
+______________________________
+Numéro en octal | permission |
+------------------------------
+1               |   read (r)
+2               |  written(w)
+4               |   execute(x)
+et aussi 
 
 
