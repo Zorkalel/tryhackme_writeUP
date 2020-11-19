@@ -57,6 +57,17 @@ Numéro en octal | permission |
 1               |   read (r)
 2               |  written(w)
 4               |   execute(x)
-et aussi 
+et aussi vous devez savoir que il ya la notion
+rwx|rwx|rwx
+---|---|---
+U    G   E
+(U)ser; (G)roup ; (E)veryone
 
+et bien c'est ainsi qu'on concluera que pour trouver les droites que ce soit
+du User et autres il faut faire l'addition et la soustraction des nombres octal, exemple
+4 + 2 = 6, et bien on dira que quelqu'un a le droit wx. si je disais trouver
+le fichier dont le User a le droit de read, le group de written et les autres execute alors ce sera en octal
+ainsi : 124
+Pour le faire avec find on a trois manieres avec l'option -perm qui sera suivi soit du
+- ou /
 
