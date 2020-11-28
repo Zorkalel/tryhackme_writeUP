@@ -5,7 +5,7 @@ Legend
 ##########
 
 TASK #2
-
+_____________
 1-Find all files whose name ends with ".xml"
 Dans cette partie on vous demande de retrouver tous les fichiers qui se terminent par .xml alors
 le mieux est d'utiliser les options telles que
@@ -29,7 +29,7 @@ Réponse : find / -type <f or d> -name "<joker>MotArechercher<joker>"
 
 
 TASK #3
-
+___________
 1-Find all files owned by the user "kittycat"
 Dans cette partie on discute a propos du proprietaire des fichiers et avec find on peut connaitre
 le propriétaire d'un fichier avec l'option -user alors la réponse sera:
@@ -45,18 +45,19 @@ find / -type <f or d > -size <tailleDuFichier>c
 
 3-Find all files in the /home directory (recursive) with size less than 2 KiB’s and extension ".txt"
 POUR trouver la taille d'un fichier en KiB's on se sert de l'argument k alors la réponse sera :
-
+```
 find /<directory> -type <f or d> -size -<tailleDuFichier>k -name "<joker>.<extension>"
-
+```
 4-Find all files that are exactly readable and writeable by the owner, and readable by everyone else (use octal format)
 Le format octal c'est le format avec les chiffres exemple 1 jusqu'à 9. la notion de permission sous linux
 a été le tourment de chaque utilisateur car c'est compliqué mais je vais résumé pour vous:
-______________________________
-Numéro en octal | permission |
-------------------------------
-1               |   read (r)
-2               |  written(w)
-4               |   execute(x)
+___________________________________
+Numéro en octal | permission       |
+-----------------------------------
+1               |   read (r)       |
+2               |  written(w)      |
+4               |   execute(x)     |
+
 et aussi vous devez savoir que il ya la notion
 |rwx|rwx|rwx|
 |---|---|---|
