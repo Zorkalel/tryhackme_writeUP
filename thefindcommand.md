@@ -1,5 +1,5 @@
-## <a href="tryhackme.com/room/thefindcommand">GO TO PLAY THE ROOM</a>
-
+<a href="tryhackme.com/room/thefindcommand">GO TO PLAY THE ROOM</a>
+<img src="find.jpg" width="50px">
 ## TASK #2
 _____________
 1-Find all files whose name ends with **.xml**
