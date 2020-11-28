@@ -1,4 +1,4 @@
-Room : tryhackme.com/room/thefindcommand
+Room : <a href="tryhackme.com/room/thefindcommand">GO TO PLAY</a>
 ###########
 Legend
 <> : exemple mais n'inclut pas dans la vraie réponse
@@ -58,10 +58,11 @@ Numéro en octal | permission |
 2               |  written(w)
 4               |   execute(x)
 et aussi vous devez savoir que il ya la notion
-rwx|rwx|rwx
----|---|---
-U    G   E
-(U)ser; (G)roup ; (E)veryone
+|rwx|rwx|rwx|
+|---|---|---|
+|U  | G | E |
+
+** (U)ser; (G)roup ; (E)veryone
 
 et bien c'est ainsi qu'on concluera que pour trouver les droites que ce soit
 du User et autres il faut faire l'addition et la soustraction des nombres octal, exemple
