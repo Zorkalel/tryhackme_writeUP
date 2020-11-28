@@ -1,8 +1,8 @@
-## Room : <a href="tryhackme.com/room/thefindcommand">GO TO PLAY</a>
+## <a href="tryhackme.com/room/thefindcommand">GO TO PLAY THE ROOM</a>
 
 ## TASK #2
 _____________
-1-Find all files whose name ends with ".xml"
+1-Find all files whose name ends with **.xml**
 Dans cette partie on vous demande de retrouver tous les fichiers qui se terminent par .xml alors
 le mieux est d'utiliser les options telles que
 - type : pour les types ( fichiers(f) ou dossiers(d)) 
@@ -13,34 +13,34 @@ le mieux est d'utiliser les options telles que
 ``` 
 find / -type <argument> -name "<joker>.<extensionArechercher>"
 ``` 
-2-Find all files in the /home directory (recursive) whose name is "user.txt" (case insensitive)
+2-Find all files in the /home directory (recursive) whose name is **user.txt** (case insensitive)
 Cet partie cet presque la même avec seule différence qu'on demande de travailler avec le répertoire
 /home de trouver le fichier user.txt mais insensible à la casse.
 on a pour argument -iname : le nom est insensible à la casse.
 ```
 find /<directoryAchercher> -type <f or d> -iname "nomDuFichier.extension"
 ```
-3-Find all directories whose name contains the word "exploits"
+3-Find all directories whose name contains the word **exploits**
 ```
 find / -type <f or d> -name "<joker>MotArechercher<joker>"
 ```
 
 ## TASK #3
 ___________
-1-Find all files owned by the user "kittycat"
+1-Find all files owned by the user **kittycat**
 Dans cette partie on discute a propos du proprietaire des fichiers et avec find on peut connaitre
 le propriétaire d'un fichier avec l'option -user alors la réponse sera:
 ```
 find / -type < f or d > -user <NomDuProprietaire>
 ```
 2- Find all files that are exactly 150 bytes in size
-Faut savoir que pour préciser la taille d'un fichier il suffit d'ajouter l option
+Faut savoir que pour préciser la taille d'un fichier il suffit d'ajouter l'option
 -size mais pour savoir la taille en byte il faut ajouter l'argument c suivi de la taille alors la
 réponse sera :
 ```
 find / -type <f or d > -size <tailleDuFichier>c
 ```
-3-Find all files in the /home directory (recursive) with size less than 2 KiB’s and extension ".txt"
+3-Find all files in the /home directory (recursive) with size less than 2 KiB’s and extension **.txt**
 POUR trouver la taille d'un fichier en KiB's on se sert de l'argument k alors la réponse sera :
 ```
 find /<directory> -type <f or d> -size -<tailleDuFichier>k -name "<joker>.<extension>"
@@ -84,7 +84,7 @@ find / -type <f or d> -perm /444
 ```
 où 644 : r r r
 
-6- Find all files with write permission for the group "others", regardless of any other permissions, with extension ".sh" (use symbolic format)
+6- Find all files with write permission for the group **others**, regardless of any other permissions, with extension **.sh** (use symbolic format)
 le format symbolic c'est un format particulier dans l'affichage des droits, exemple
 u pour USER, g pour Group et o pour les autres, avec + pour ajouter et - pour enlever et = pour soumettre
 des droits a un group ouu user et ignorer les autres
@@ -96,7 +96,7 @@ SUID = s
 ```
 find /usr/bin -type f -user <proprietaire> -permission -u=<SUIDvalue>
 ```
-8-Find all files that were not accessed in the last 10 days with extension ".png"
+8-Find all files that were not accessed in the last 10 days with extension **.png**
 avoir acces a un fichier est représenté par l'option -a mais pour préciser le temps dans lequel
 il faut ajouter l'argument time ainsi on aura -atime
 ```
