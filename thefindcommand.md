@@ -103,4 +103,9 @@ find / -type f -atime +<numberOfDays> -name "<joker>.<extension>"
 9-Find all files in the /usr/bin directory (recursive) that have been modified within the last 2 hours
 pour voir les fichiers modifier depuis un temps il faut l'option -m mais pour dire qu'il a été modifié depuis un temps durée il faut préciser l'argument min( minute) et on sait que 1 heure vaut 60 minutes ainsi la réponse sera:
 
-dfind /usr/bin -type <f or d> -mmin -<TempsModifierEnMinute>
+'''
+find /usr/bin -type <f or d> -mmin -<TempsModifierEnMinute>
+'''
+
+
+#FIN
